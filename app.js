@@ -156,7 +156,10 @@ app.use("/listings",listingrouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
 
-
+app.get("/",(req,res)=>
+{
+    res.redirect("/listings");
+});
 
 //kisi bhi route se match  nhi huwa to error middleware ko call jayegi
 app.all("/*splat", (req, res, next) => {
