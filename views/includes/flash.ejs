@@ -1,0 +1,25 @@
+<%if(success && success.length){%>
+<div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+
+<%=success%>
+<!-- bootstrap dismissing button hai we can remove our flash message by corss sign -->
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%>
+
+
+<!-- yaha if success means yade messessage aaya then chale -->
+ <!-- && success.length kyu because success is array and if empty array then ye chaleg aso 
+  if length is 0 then nhi chahlega -->
+
+
+
+<!-- error flash if listing not exits -->
+  <%if(error && error.length){%>
+<div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+
+<%=error%>
+<!-- bootstrap dismissing button hai we can remove our flash message by corss sign -->
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<%}%>

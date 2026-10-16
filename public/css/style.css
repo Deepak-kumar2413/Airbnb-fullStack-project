@@ -1,0 +1,109 @@
+body{
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* ab content wla part khali space sb occupy kr lega */
+.container{
+    flex:1;
+}
+/* nav-bar */
+.navbar{
+   height:5rem; 
+   background-color: white;
+}
+.fa-compass{
+    color:#fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color:#222222 !important;
+}
+
+/* footer */
+.f-info-links a{
+    text-decoration: none;
+    color:#222222;
+     margin-right: 0.5rem; 
+    
+}
+.f-info-links a:hover{
+    text-decoration: underline
+   
+}
+.f-info-links,.f-info-socials,.company-name{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+
+.f-info
+{
+    display:flex;
+    justify-content: center;
+    background-color: #ebebeb;
+    height:7rem;
+    flex-wrap: wrap; 
+}
+/* cards styling */
+.listing-card{
+    border:none !important;  
+    margin-bottom: 2rem;
+}
+.card-img-top
+{
+    border-radius:1rem !important;
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    /* image height differente hai fir bhi height 250px me fit ho jayega */
+}
+
+.card-text {
+    font-weight: 400 !important;
+}
+/* hmne card ko anchor tage banaya take jaise clik ho hm use individual listing ke show page pe chale jaye */
+.show_individual-listing
+{
+    text-decoration: none !important;
+}
+.card-img-overlay{
+    opacity: 0 ;
+}
+.card-img-overlay:hover{
+    opacity:0.2 ;
+    background-color: #fff ;
+}
+/* New page */
+.add-btn{
+    background-color: #fe424d !important;
+    border:none !important;
+}
+/* Edit page */
+.edit-btn{
+    background-color: #fe424d !important;
+    border:none !important;
+    color:white !important;
+}
+
+/* show page */
+.show-img{
+height:40vh !important;
+}
+.btns{
+    display: flex;;
+}
+
+
+/* map styling */
+#map {
+    height: 400px;
+    width: 90vh;
+    }

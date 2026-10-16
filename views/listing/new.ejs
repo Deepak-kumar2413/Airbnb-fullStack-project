@@ -1,0 +1,81 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+     <br><br>
+    <h2>Creating New Listing</h2>
+   <br>
+    <div class="row">
+        <div class="col-8">
+            <!-- need validation nonvalidate yaha mai bootshtrap use kiya hai for form validation -->
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+        <!-- mb-3 means margin bottom, class=row g-2 means each row has two box and col-4 means size decide of box -->
+        <div  class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="title"
+             placeholder="Luxirous Appartment" 
+             type="text"
+              class="form-control"
+              required
+              />
+              <!-- ye class se mai valid feedback diyaa hai -->
+                  <div class="valid-feedback">
+                       Looks good!
+                  </div>
+        </div>
+        
+        <div  class="mb-3">
+             <label for="description" class="form-label">description</label>
+            <textarea  name="description" placeholder="" class="form-control" required></textarea>
+            <!-- ye class="invalid-feedback se mai invalid feedback print kara skta hu" -->
+            <div class="invalid-feedback">
+        write description.
+      </div>
+        </div>
+        
+       
+        <!-- <div  class="mb-3">
+             <label for="image" class="form-label">image</label>
+            <input name="image" placeholder="enter URL/Link of image" type="text" class="form-control">
+
+        </div> -->
+        <!--  -->
+        <div  class="mb-3">
+             <label for="image" class="form-label">Upload Listing Image</label>
+            <input name="listing[image]"  type="file" class="form-control" required>
+          
+        </div>
+        
+        <div class= "row g-2">
+
+        <div  class="mb-3 col-md-7">
+             <label for="price" class="form-label">price</label>
+            <input name="price" placeholder="1200"  class="form-control" required>
+             <div class="invalid-feedback">
+                enter valid price.
+            </div>
+        </div>
+
+       <div  class="mb-3 col-md">
+         <label for="country" class="form-label">country</label>
+        <input name="country" placeholder="India" type="text" class="form-control" required>
+         <div class="invalid-feedback">
+                countary name should be valid.
+            </div>
+       </div>
+
+       </div>
+
+
+       <div  class="mb-3">
+         <label for="location" class="form-label">location</label>
+        <input name="location" placeholder="Siwan,Bihar" type="text" class="form-control" required>
+         <div class="invalid-feedback">
+                location should be valid
+            </div>
+       </div>
+        
+        <button  class="btn btn-dark add-btn">Add</button>
+    </form>
+    </div>
+</div>
+</body>

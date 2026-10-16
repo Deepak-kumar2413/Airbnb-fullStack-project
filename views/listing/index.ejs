@@ -1,0 +1,49 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+
+<!-- ab muje ye need hai nhi because mai bootsrap se add new listing me add kr diya hu  -->
+    <!-- <form method="GET" action="/listings/new">
+        <button>Create New</button>
+    </form> -->
+
+    
+
+<div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 " >
+    <!-- ye me botstrap se banay hai for image insrtion in card -->
+<% for(let listing of alllistings){%>
+
+    <a href="/listings/<%=listing._id%>" class="show_individual-listing">
+
+   <div class="card row listing-card" style="width: 22rem;">
+   <img src="<%=listing.image.url%>" class="card-img-top card-image" alt="Listing_image">
+   <!-- card image overlay is used to apply effect on card image  like effect on hover image -->
+    <div class="card-img-overlay"></div>
+
+   <div class="card-body">
+    <p class="card-text">
+       <%=listing.title%> <br>
+        &#8377; <%=listing.price.toLocaleString("en-IN")%> /Night
+     </p>
+   </div>
+   </div>
+
+</a>
+     <%}%>
+</div>
+
+
+
+
+
+
+
+
+
+ <!-- ye pahe yese tha only name of all listing title  -->
+     <!-- <h3>All listing</h3>
+    <ul>
+         <% for(let listing of alllistings){%> 
+            <li><a href="/listings/<%=listing._id%>"><%=listing.title%></a></li>
+        <%}%>
+    </ul>  -->
+</body> 
